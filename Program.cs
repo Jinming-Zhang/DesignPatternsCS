@@ -1,12 +1,14 @@
 ﻿using System;
-
+using Builder;
 namespace DesignPatternsC_
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Builder Demos
+            new Builder.HTMLStringBuilder().Demo();
+            new Builder.HTMLBuilder().Demo();
         }
     }
 }
