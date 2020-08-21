@@ -1,14 +1,16 @@
 ﻿using System;
 using Builder;
+using DelegateDemo;
 namespace DesignPatternsC_
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Builder Demos
-            new Builder.HTMLStringBuilder().Demo();
-            new Builder.HTMLBuilder().Demo();
+            new DelegateDemo.DelegateDemo().Demo();
+            //%%%%%%%%%%%%%%% Builder Demos %%%%%%%%%%%%%%%%%%//
+            // new Builder.HTMLStringBuilder().Demo();
+            // new Builder.HTMLBuilder().Demo();
         }
     }
 }
