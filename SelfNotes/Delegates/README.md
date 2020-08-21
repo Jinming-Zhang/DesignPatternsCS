@@ -1,4 +1,4 @@
-# Some Notes while learning Delegate concept in C [(Docs)](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)
+# Some Notes while learning Delegate concept in C# [(Docs)](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)
 
 delegate is a type in C#. Think of it as a class which can hold a set of functions with certain signatures. The signature of functions should match what was declared when creating the corresponding delegate. Example to create a delegate type:
 
