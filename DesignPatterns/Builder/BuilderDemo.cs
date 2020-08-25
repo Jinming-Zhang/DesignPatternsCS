@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace Builder
+/// <summary>
+/// A simple Builder that exposes an API for building very simplified HTML elements.
+/// The Builder is very simple and can not be chained in the process.
+/// </summary>
+namespace SimpleBuilderDemo
 {
     class HTMLStringBuilder
     {

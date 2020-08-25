@@ -24,8 +24,9 @@ namespace FluentBuilderInheritanceDemo
 
             }
         }
-        public static Func<string, string, Builder> NEW = (string species, string gender) => new Builder(species, gender);
-        // public static AnimalBasicBuilder<Animal> NEW = new AnimalBasicBuilder<Animal>();
+        // public static Func<string, string, Builder> NEW = (string species, string gender) => new Builder(species, gender);
+        public static Builder NEW(string species, string gender) => new Builder(species, gender);
+
         // public AnimalBasicBuilder animalBuilder;
         public override string ToString()
         {
@@ -61,7 +62,8 @@ namespace FluentBuilderInheritanceDemo
 
             }
         }
-        public static Func<string, string, string, WB> NEW_WOLF = (string gender, string name, string color) => new WB(gender, name, color);
+        // public static Func<string, string, string, WB> NEW_WOLF = (string gender, string name, string color) => new WB(gender, name, color);
+        public static WB NEW_WOLF(string gender, string name, string color) => new WB(gender, name, color);
         public string color, name; // madatory
         public bool hasPack, isSingle; // optional
         public override string ToString()

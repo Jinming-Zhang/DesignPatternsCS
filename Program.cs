@@ -1,6 +1,7 @@
 ﻿using System;
-using Builder;
 using DelegateDemo;
+using SimpleBuilderDemo;
+using FacetedBuilderDemo;
 using FluentBuilderDemo;
 using FluentBuilderInheritanceDemo;
 namespace DesignPatternsC_
@@ -11,10 +12,11 @@ namespace DesignPatternsC_
         {
             // new DelegateDemo.DelegateDemo().Demo();
             //%%%%%%%%%%%%%%% Builder Demos %%%%%%%%%%%%%%%%%%//
-            // new Builder.HTMLStringBuilder().Demo();
-            // new Builder.HTMLBuilder().Demo();
+            // new SimpleBuilderDemo.HTMLStringBuilder().Demo();
+            // new SimpleBuilderDemo.HTMLBuilder().Demo();
+            new FacetedBuilderDemo.FacetedBuilderDemo().Demo();
             // new WolfFluentBuilderDemo().Demo();
-            new FluentBuilderInheritanceDemo.FluentBulderInheritanceDemo().Demo();
+            // new FluentBuilderInheritanceDemo.FluentBulderInheritanceDemo().Demo();
         }
     }
 }

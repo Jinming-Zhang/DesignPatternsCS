@@ -24,6 +24,10 @@ namespace FluentBuilderDemo
         }
     }
 
+    /// <summary>
+    /// Unlike Faceted Builder, here we do not create sub-builders in the parent builder class. Instead we create a new sub-builder class that inherits the parent builder for each necessary sub-builder required.
+    /// This approach is more adhere to the OPEN/CLOSE princile of software design. However, there will be some problems when we need to make a sub-sub-builder that inherits from the sub-builder. This will be resolve later in the FluentBuilderInheritant demo.
+    /// </summary>
     public abstract class WolfBuilder
     {
         protected Wolf wolf;
