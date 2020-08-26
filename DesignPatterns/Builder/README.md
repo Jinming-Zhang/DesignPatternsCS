@@ -1,6 +1,6 @@
 # Builder Design Pattern
 
-Builder design pattern is used when the objects we want to build are kind of complecated, ie, has a lot of fields.
+Builder design pattern is used when the objects we want to build are kind of complecated, ie, has a lot of fields. It will be difficult and hard to read if we simply put every thing in a single constructor. The Builder design pattern will provide people a clean API to create an object piece by piece.
 
 ## Simple Builder
 
