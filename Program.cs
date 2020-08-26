@@ -7,6 +7,7 @@ using FluentBuilderDemo;
 using FluentBuilderInheritanceDemo;
 using FunctionalBuilderDemo;
 using FunctionalBuilderGeneralized;
+using BuilderExcerciseDemo;
 namespace DesignPatternsC_
 {
     class Program
@@ -22,6 +23,7 @@ namespace DesignPatternsC_
             // new FluentBuilderInheritanceDemo.FluentBulderInheritanceDemo().Demo();
             // new FunctionalBuilderDemo.FunctionalBuilderDemo().Demo();
             new FunctionalBuilderGeneralizedDemo().Demo();
+            new BuilderExcerciseDemo.BuilderExcerciseDemo().Demo();
         }
     }
 }
