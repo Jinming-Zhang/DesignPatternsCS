@@ -90,7 +90,7 @@ namespace FunctionalBuilderDemo
             PersonBuilder personBuilder = new PersonBuilder();
             // Note that here each time we call the builder method (Called, WorkAs), the builder actually add the function to its builder functons list, and return the Builder object at the same time so we can chain other builders.
             // Also the object is not being built at all until the Build() function is called.
-            Person newPerson = personBuilder.Called("Wolf").WorksAs("Eater").eBuild();
+            Person newPerson = personBuilder.Called("Wolf").WorksAs("Eater").Build();
             Console.WriteLine(newPerson);
         }
     }

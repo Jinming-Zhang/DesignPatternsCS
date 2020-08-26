@@ -6,6 +6,7 @@ using FacetedBuilderDemo;
 using FluentBuilderDemo;
 using FluentBuilderInheritanceDemo;
 using FunctionalBuilderDemo;
+using FunctionalBuilderGeneralized;
 namespace DesignPatternsC_
 {
     class Program
@@ -19,7 +20,8 @@ namespace DesignPatternsC_
             // new FacetedBuilderDemo.FacetedBuilderDemo().Demo();
             // new WolfFluentBuilderDemo().Demo();
             // new FluentBuilderInheritanceDemo.FluentBulderInheritanceDemo().Demo();
-            new FunctionalBuilderDemo.FunctionalBuilderDemo().Demo();
+            // new FunctionalBuilderDemo.FunctionalBuilderDemo().Demo();
+            new FunctionalBuilderGeneralizedDemo().Demo();
         }
     }
 }
