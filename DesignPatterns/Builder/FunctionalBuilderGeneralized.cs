@@ -2,27 +2,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// Since the process of using functional builder to build object can also be applied to different types of objects. We can generalize the previous functional builder using generic types so that it can be used to build more objects in general.
+/// </summary>
 namespace FunctionalBuilderGeneralized
 {
-    public class Builder<T>
+    /// <summary>
+    /// This is the root functional builder class that other functional builder will inherit from when a builder is needed for other types.
+    /// </summary>
+    /// <typeparam name="T">The type of the object needs to be built</typeparam>
+    /// <typeparam name="TSELF">A recursive generic so that the returned builder from the 'addBuilderMethod' can be chained together when we adding building methods in our custom functional builder. </typeparam>
+    public abstract class FunctionalBuilder<T, TSELF>
     where T : new()
-        // where BUILDER : Builder<T, BUILDER>
+    where TSELF : FunctionalBuilder<T, TSELF>
     {
-        public List<Func<T, T>> builderMethods = new List<Func<T, T>>();
-        public Builder<T> addBuilderMethod(Action<T> method)
+        //
+        private readonly List<Func<T, T>> builderMethods = new List<Func<T, T>>();
+        public TSELF addBuilderMethod(Action<T> method)
         {
-            builderMethods.Add((T objToBuild) =>
+            builderMethods.Add((T objToBuld) =>
             {
-                method(objToBuild);
-                return objToBuild;
+                method(objToBuld);
+                return objToBuld;
             });
-            return this;
+            return (TSELF)this;
         }
-        public T Build()
-        {
-            return builderMethods.Aggregate(new T(), (objBuilding, builderMethod) => builderMethod(objBuilding));
-        }
+        public T Build() => builderMethods.Aggregate(new T(), (objBuilding, builderMethod) => builderMethod(objBuilding));
+
     }
+    /// <summary>
+    /// Now we have a wolf to build again.
+    /// </summary>
     public class Wolf
     {
         public string name, age, gender;
@@ -34,38 +44,42 @@ namespace FunctionalBuilderGeneralized
             return $"I'm {name}, I'm a  {age} years old {gender} wolf. I {packInfo}. {statusInfo}.";
         }
     }
-    public static class WolfBuilderExtension
+    /// <summary>
+    /// Here is our customized functional builder for build a Wolf. This functional builder will inherit from the generlized functional builder and then add necessary builder methods to its list of all builder methods.
+    /// </summary>
+    public class WolfBuilder : FunctionalBuilder<Wolf, WolfBuilder>
     {
-        public static Builder<Wolf> Name(this Builder<Wolf> wolfBuilder, string name)
-        {
-            return wolfBuilder.addBuilderMethod((Wolf w) =>
+        public WolfBuilder Name(string name) =>
+            addBuilderMethod((Wolf w) =>
             {
                 w.name = name;
             });
-        }
 
-        public static Builder<Wolf> Age(this Builder<Wolf> wolfBuilder, string age)
+        public WolfBuilder Age(string age)
         {
-            return wolfBuilder.addBuilderMethod((Wolf w) =>
+            addBuilderMethod((Wolf w) =>
             {
                 w.age = age;
             });
+            return this;
         }
 
-        public static Builder<Wolf> Gender(this Builder<Wolf> wolfBuilder, string gender)
+        public WolfBuilder Gender(string gender)
         {
-            return wolfBuilder.addBuilderMethod((Wolf w) =>
+            addBuilderMethod((Wolf w) =>
             {
                 w.gender = gender;
             });
+            return this;
         }
 
     }
+
     public class FunctionalBuilderGeneralizedDemo
     {
         public void Demo()
         {
-            Builder<Wolf> wolfBuilder = new Builder<Wolf>();
+            WolfBuilder wolfBuilder = new WolfBuilder();
             Wolf w = wolfBuilder.Name("wolfy").Gender("male").Age("20").Build();
             Console.WriteLine(w);
         }

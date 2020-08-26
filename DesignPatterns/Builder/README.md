@@ -36,3 +36,7 @@ Upon build, the builder will apply all functions in its stored list and apply th
 
 The finsihed object will be returned.
 To extend the bulder, we use extended methods, so that we are adhereing to the open/close principle, also without the need of inheritance.
+
+## Generalized Functional Builder
+
+Since the process of using functional builder to build object can also be applied to different types of objects. We can generalize the previous functional builder using generic types so that it can be used to build more objects in general.
