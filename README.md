@@ -16,16 +16,16 @@ These are my personal notes while learning design patterns in C# from Udemy cour
 
 - ### Dependency Inversion
 
-## [Design Patterns](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns)
+## Design Patterns
 
 1. ### Creational Design Patterns
 
-   - ### [Builder](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Builder)
+- ### [Builder](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Builder)
 
-   - ### [Factories](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Factories)
+- ### [Factories](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Factories)
 
-   - ### [Prototype](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Prototype)
+- ### [Prototype](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Prototype)
 
-   - ### [Singleton](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Singleton)
+- ### [Singleton](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Singleton)
 
 2. ### Structural Design Patterns
