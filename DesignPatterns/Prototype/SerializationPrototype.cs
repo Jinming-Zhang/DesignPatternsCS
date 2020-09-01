@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 using static System.Console;
 
-namespace SerializationPrototypeDemo
+namespace SerializationPrototype
 {
     public static class Extension
     {
@@ -78,9 +78,9 @@ namespace SerializationPrototypeDemo
             return $"Longitude: {this.longitude}, Latitude: {this.latitude}.";
         }
     }
-    public static class SerializationPrototypeDemo
+    public static class SerializationPrototype
     {
-        public static void Demo()
+        public static void SerializationPrototypeDemo()
         {
             Wolf wolf1 = new Wolf("wolfy", "20", new Location(123, 456));
             // use binary serialization

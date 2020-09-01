@@ -17,8 +17,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 // Prototype
-using SimplePrototypeDemo;
-using SerializationPrototypeDemo;
+using static SimplePrototype.SimplePrototype;
+using static SerializationPrototype.SerializationPrototype;
 namespace DesignPatternsC_
 {
     static class Test
@@ -124,8 +124,8 @@ namespace DesignPatternsC_
             // Console.WriteLine(result);
             // AbstractFactoryDemo.AbstractFactoryDemo.Demo();
             //%%%%%%%%%%%%%%  Prototype  %%%%%%%%%%%%%%%%%%%%%//
-            // SimplePrototypeDemo.SimplePrototypeDemo.Demo();
-            SerializationPrototypeDemo.SerializationPrototypeDemo.Demo();
+            // SimplePrototypeDemo();
+            // SerializationPrototypeDemo();
         }
 
     }

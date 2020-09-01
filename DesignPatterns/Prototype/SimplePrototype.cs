@@ -1,7 +1,7 @@
 using System;
 using static System.Console;
 
-namespace SimplePrototypeDemo
+namespace SimplePrototype
 {
     public interface IDeepCloneable<T>
     {
@@ -68,9 +68,9 @@ namespace SimplePrototypeDemo
             return new Location(this.longitude, this.latitude);
         }
     }
-    public static class SimplePrototypeDemo
+    public static class SimplePrototype
     {
-        public static void Demo()
+        public static void SimplePrototypeDemo()
         {
             Wolf wolf1 = new Wolf("wolfy", "20", new Location(123, 456));
             // without deep copy, we also modifies the original object when manipulating the new object
