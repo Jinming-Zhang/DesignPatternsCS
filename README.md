@@ -4,22 +4,28 @@ These are my personal notes while learning design patterns in C# from Udemy cour
 
 ---
 
-## List of topics
+## SOLID Principle
 
-### SOLID Principle
+- ### Single Responsibility
 
-- #### Single Responsibility
+- ### Open/Close Principle
 
-- #### Open/Close Principle
+- ### Liskov Substitution
 
-- #### Liskov Substitution
+- ### Interface Segregation
 
-- #### Interface Segregation
+- ### Dependency Inversion
 
-- #### Dependency Inversion
+## [Design Patterns](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns)
 
-### [Design Patterns](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns)
+1. ### Creational Design Patterns
 
-1. #### Creational Design Patterns
+   - ### [Builder](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Builder)
 
-- ##### [Builder](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Builder)
+   - ### [Factories](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Factories)
+
+   - ### [Prototype](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Prototype)
+
+   - ### [Singleton](https://github.com/Jinming-Zhang/DesignPatternsCS/tree/master/DesignPatterns/Singleton)
+
+2. ### Structural Design Patterns
