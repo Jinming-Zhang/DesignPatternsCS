@@ -63,3 +63,42 @@ public class AsyncInitClass {
 Factory design pattern can be a great way here to provide a cleaner API for creating such objects.
 
 ## Inner Factory
+
+Create a separate Factory class inside the object to adhere the single responsibility principle. The Factory class can also be outside of the object, but then the object needs a public constructor for the Factory class to use. If we don't want other people to use the default constructor, it's better to use a Inner Factory Class.
+
+```cs
+public class Point
+    {
+        public double x, y;
+        private Point(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+        public static Point Origin = new Point(0, 0); // a static field
+        // public static Point Origin => new Point(0,0); // a static property
+        // public static Factory Factory = Factory;
+        public static class Factory
+        {
+            public static Point NewCartisianPoint(double x, double y)
+            {
+                return new Point(x, y);
+            }
+            public static Point NewPolarPoint(double rho, double theta)
+            {
+                return new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
+            }
+        }
+
+    }
+```
+
+## Abstract Factory
+
+Can be used to create related objects.
+Abstract Factory will give out abstract objects instead of concrete object.
+
+In the Factory Method / Inner Factory Class we return the real constructed object. In Abstract Factory we will return the abstract class or interface.
+
+This let us able to craete a list of Factory and loop them through.
+Recall that interface contains a list of methods that every class that inherits the interface has to implement.

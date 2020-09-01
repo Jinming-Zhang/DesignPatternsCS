@@ -12,10 +12,13 @@ using BuilderExcerciseDemo;
 // Factory demos
 using FactoryMethodDemo;
 using AsyncFactoryMethodDemo;
+using AbstractFactoryDemo;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-
+// Prototype
+using SimplePrototypeDemo;
+using SerializationPrototypeDemo;
 namespace DesignPatternsC_
 {
     static class Test
@@ -102,10 +105,10 @@ namespace DesignPatternsC_
     }
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             // new DelegateDemo.DelegateDemo().Demo();
-            await AsyncDemo.AsyncDemo.Demo();
+            // await AsyncDemo.AsyncDemo.Demo();
             //%%%%%%%%%%%%%%% Builder Demos %%%%%%%%%%%%%%%%%%//
             // new SimpleBuilderDemo.HTMLStringBuilder().Demo();
             // new SimpleBuilderDemo.HTMLBuilder().Demo();
@@ -116,9 +119,13 @@ namespace DesignPatternsC_
             // new FunctionalBuilderGeneralizedDemo().Demo();
             // new BuilderExcerciseDemo.BuilderExcerciseDemo().Demo();
             //%%%%%%%%%%%% Factory Demos %%%%%%%%%%//
-            FactoryMethodDemo.FactoryMethodDemo.Demo();
-            string result = await AsyncFactoryMethodDemo.AsyncFactoryMethodDemo.Demo();
-            Console.WriteLine(result);
+            // FactoryMethodDemo.FactoryMethodDemo.Demo();
+            // string result = await AsyncFactoryMethodDemo.AsyncFactoryMethodDemo.Demo();
+            // Console.WriteLine(result);
+            // AbstractFactoryDemo.AbstractFactoryDemo.Demo();
+            //%%%%%%%%%%%%%%  Prototype  %%%%%%%%%%%%%%%%%%%%%//
+            // SimplePrototypeDemo.SimplePrototypeDemo.Demo();
+            SerializationPrototypeDemo.SerializationPrototypeDemo.Demo();
         }
 
     }
