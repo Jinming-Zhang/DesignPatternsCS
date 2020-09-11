@@ -98,7 +98,7 @@ Also more resource on [refactoring.guru](https://refactoring.guru/design-pattern
 
 - ### Memento
 
-Provide a read-only token that representing a system's state and allows the system to roll-back to that state.
+  Provide a read-only token that representing a system's state and allows the system to roll-back to that state.
 
 - ### Null Object
 
@@ -112,7 +112,7 @@ Provide a read-only token that representing a system's state and allows the syst
 
 - ### Strategy
 
-Uses composition to define an algorithm blueprint/placeholder
+  Uses composition to define an algorithm blueprint/placeholder
 
 - ### Template Method
 
@@ -120,4 +120,4 @@ Uses composition to define an algorithm blueprint/placeholder
 
 - ### Visitor
 
-Adding functionalities to existing classes, traversal through the hierachy.
+  Adding functionalities to existing classes, traversal through the hierachy.
