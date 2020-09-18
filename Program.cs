@@ -2,6 +2,7 @@
 using AsyncDemo;
 using DelegateDemo;
 using Event;
+using ListOperations;
 //************** Creational Design Patterns **************//
 // builder demos
 using BuilderExcerciseDemo;
@@ -40,7 +41,8 @@ namespace DesignPatternsC_ {
         static void Main (string[] args) {
             // new DelegateDemo.DelegateDemo().Demo();
             // await AsyncDemo.AsyncDemo.Demo();
-            Event.Event.EventDemo ();
+            // Event.Event.EventDemo ();
+            ListOperations.ListOperations.ListOperationsDemo ();
             //%%%%%%%%%%%%%%% Builder Demos %%%%%%%%%%%%%%%%%%//
             // new SimpleBuilderDemo.HTMLStringBuilder().Demo();
             // new SimpleBuilderDemo.HTMLBuilder().Demo();
@@ -64,9 +66,6 @@ namespace DesignPatternsC_ {
             // BridgeExerciseDemo ();
             //%%%%%%%%%%%%%%  Flyweight  %%%%%%%%%%%%%%%%%%%%%//
             // FlyweightExerciseDemo ();
-            List<int> intLst = new List<int> { 6, 6, 6, 6, 6 };
-            TryList (intLst);
-            Console.WriteLine (intLst[1]);
         }
 
         static void TryList (List<int> intlst) {
