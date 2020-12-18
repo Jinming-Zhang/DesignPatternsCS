@@ -114,9 +114,9 @@ namespace SimpleBuilderDemo
             return ToStringImp(0);
         }
     }
-    class HTML
+    static class HTML
     {
-        public void RunDemo()
+        public static void RunDemo()
         {
             return;
         }

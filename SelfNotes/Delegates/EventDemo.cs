@@ -17,7 +17,7 @@ namespace Event {
     /// </summary>
     public class Prairie {
         public event EventHandler<HuntReady> HuntStart;
-        public event EventHandler<HuntReadyStruct> HuntStartStruct;
+        // public event EventHandler<HuntReadyStruct> HuntStartStruct;
         public void Simulate () {
             int count = 0;
             Random rand = new Random ();
@@ -31,7 +31,6 @@ namespace Event {
     }
 
     public class Wolf {
-        int num;
         public int Num { get; set; }
         public Wolf (Prairie field) {
             field.HuntStart += this.GoHunting;

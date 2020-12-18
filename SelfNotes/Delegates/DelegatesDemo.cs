@@ -12,7 +12,7 @@ namespace DelegateDemo
     ///           0  if left == right
     ///           positive number if left < right</returns>
     public delegate int Comparison<in T>(T left, T right);
-    class DelegateDemo
+    public class DelegateDemo
     {
         // class fields
         public string Fir { get; set; }

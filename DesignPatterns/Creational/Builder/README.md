@@ -8,6 +8,7 @@ A simple Builder implementation where a separated class is created and provide m
 
 Depending on the design, the builder methods may or may not be chainable.
 
+using BuilderExcerciseDemo;
 ## Faceted Builder
 
 A Builder uses facade approach, which stores a reference of the object needs to be built, and enables multiple builders and chaining builder methods. However, the object has to be a reference type. Primitives like string will not work.
