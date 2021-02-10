@@ -30,6 +30,7 @@ using static AdapterExercise.AdapterExercise;
 using static BridgeExercise.BridgeExercise;
 // Composite
 // Decorator
+using static DecoratorExercise.DecoratorDemo;
 // Facade
 // Flyweight
 using static FlyweightExercise.FlyweightExercise;
@@ -73,7 +74,11 @@ namespace DesignPatternsC_
             // FlyweightExerciseDemo ();
             // %%%%%%%%%%%%% Interview Problems %%%%%%%%%%%%%//
             // interviewAsyncLoadingGame.SolutionDemo.Demo ();
+            System.DateTime now = System.DateTime.Now;
+            System.DateTime utcNow = System.DateTime.UtcNow;
 
+            Console.WriteLine((utcNow - now).ToString("h'h 'm'm 's's'"));
+            Demo();
         }
 
         static int[,] MagicSquare(int[,] square, int index)
